@@ -21,8 +21,12 @@ module.exports = {
 	sandbox: false,
 	/* config which one notebook can be displayed in your blog */
 	blogNoteBookName: '大象博客',//default name
-	/* (YXBJ)evernote development token , apply from https://app.yinxiang.com/api/DeveloperToken.action */
-	/* 如果不能自助申请可以在此人工申请 https://app.yinxiang.com/api/DeveloperToken.action  */
+	/* 
+	evernote(YXBJ) development token , 
+	apply from https://app.yinxiang.com/api/DeveloperToken.action 
+	如果不能自助申请可以在此人工申请 
+	https://app.yinxiang.com/api/DeveloperToken.action 
+	*/
 	token: 'Your evernote development token',
 }
 npm i
@@ -38,8 +42,8 @@ npm start //http://localhost:3000
 ./public/static/index.scss
 
 
-### 后记/Note
-* 笔记内容解析是基于[enml2html.js](https://github.com/itgoyo/enml2html)修改,(./evernote/tool/enml2html)将笔记图片保存到网站静态目录防止未分享笔记图片不显示.  
+### 后记/Note
+* 笔记内容解析是基于[enml2html.js](https://github.com/itgoyo/enml2html)修改,(./evernote/tool/enml2html)将笔记图片保存到网站静态目录防止未分享笔记图片不显示.  
 * 所有数据请求都有做缓存处理,列表10分钟,笔记内容30分钟等等(./evernote/api/elephantBlogApi.js)  
 
 * Modify enml2html.js to parse the Evernote enml,it will save note's picture to static folder to prevent encounter error when  get pictures from a unshare note.
