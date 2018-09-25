@@ -3,7 +3,7 @@
 
 ### 简介/introduction
 
-使用Koa2基于印象笔记API,将您的笔记发布到个人博客网站.  
+使用Koa2基于印象笔记API,将您的笔记发布到个人博客网站.  
 Using Koa2 and base on Evernote API,publish your Evernote notes to personal website as blog.
 
 ### Quick Start
@@ -19,12 +19,12 @@ module.exports = {
 	china: true,
 	/*  change to false when you are ready to switch to production */
 	sandbox: false,
-	/* config which one notebook can be displayed in your blog */
+	/* config which one notebook can be displayed in your blog. */
 	blogNoteBookName: '大象博客',//default name
 	/* 
 	evernote(YXBJ) development token , 
 	apply from https://app.yinxiang.com/api/DeveloperToken.action 
-	如果不能自助申请可以在此人工申请 
+	如果不能自助申请可以在此人工申请 
 	https://app.yinxiang.com/api/DeveloperToken.action 
 	*/
 	token: 'Your evernote development token',
