@@ -1,0 +1,52 @@
+{% import './menu.njk' as macro %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width'>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="author" content="蒋奉兵" /> 
+	<meta name="generator" content="node" /> 
+	<meta name="description" content="蒋奉兵的个人主页 web前端程序员 前端技术博客 基于Evernote API"/>
+    <title>蒋奉兵的个人主页 前端技术博客</title>
+    <link rel='stylesheet' href='/static/css/index.css'>
+</head>
+<body>
+<header class='home-header'>
+	<img src='/static/images/user.png'/>
+</header>
+{% block menu %}
+	{{macro.menu(2 if tags.currentGuid==='c1014be8-3b7c-47ec-ade1-2f1a3d348d03' else 1)}}
+{% endblock %}
+<div class='main-wrap'>
+
+	<div class='left-side-wrap'>
+		<div class='side-content'>
+			<div class='title'>分类标签</div>
+			<ul class='tags-wrap'>
+				{% for tag in tags.list %}
+					<li><a class="{{'on' if tag.guid===tags.currentGuid else ""  }}" href='/page/1?tag={{tag.guid}}'>{{tag.name}}</a></li>
+				{% endfor %}
+				<li><a href='/page/1'>全部</a></li>
+			</ul>
+		</div>
+		<div class='side-content'>
+			<div class='title'>联系方式</div>
+			<p><a class='wb-link' href='https://weibo.com/jiangfb'><img src='/static/images/weibo.svg' /> 微博</a></p>
+			<p><a class='mail-link' href='mailto:jiangfb@live.com'><img src='/static/images/mail.svg' /> Email</a></p>
+			<p><a href='https://github.com/jiangfb'><img src='/static/images/social-github.svg' /> Github</a></p>
+			<p><a class='tw-link' href='https://twitter.com/jiangfb'><img src='/static/images/Twitter.svg' /> twitter</a></p>
+		</div>
+	</div>
+	<div class='main-content-wrap'>
+		{% block content %}
+		{% endblock %}
+	</div>
+</div>
+
+<div class='copyright'>
+	<span>Since 2018 中秋</span>
+	<span>Copyright @ 蒋奉兵</span>
+	<span><img class='right-icon' src='/static/images/evernote.svg' />Base on Evernote API</span>
+</body>
+</html>

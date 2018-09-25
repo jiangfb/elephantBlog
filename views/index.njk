@@ -1,0 +1,40 @@
+{% extends './components/layout.njk' %}
+
+{% block content %}
+<div class='post-content-wrap'>
+	{%for note in notes %}
+		<article class='post'> 
+			<div class='post-head'>
+				<div class='post-title'>
+					<a href={{"/note/"+note.guid}}>
+						{{note.title}} 
+					</a>
+				</div>
+				<div class='post-meta'>
+					<span>{{note.created}}</span>
+					{% for name in note.tagNames %}
+						<span class='post-tag'>{{name}}</span>
+					{% endfor %}
+				</div>
+				<div class='post-preview'>{{note.previewContent |safe}}</div>
+			</div>
+			<footer class='post-footer'>
+				<a class='read-all-link' href={{"/note/"+note.guid+"?tag="+tags.currentGuid}}>阅读全文</a> 
+			</footer>
+		</article>
+	{%endfor%}	
+</div>
+<nav class='pagination'>
+	{% if currentPage-1>0 %}
+		<a href='/page/{{currentPage-1}}?tag={{tags.currentGuid}}'>上一页</a>
+	{% endif %}
+	<span>
+		第{{currentPage}}页/共{{totalPage}}页
+	</span>
+	{% if currentPage<totalPage %}
+		<a href='/page/{{currentPage+1}}?tag={{tags.currentGuid}}'>下一页</a>
+	{% endif %}
+	
+</nav>
+{% endblock %}
+

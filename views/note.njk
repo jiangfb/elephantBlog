@@ -1,0 +1,18 @@
+{% extends './components/layout.njk' %}
+
+{% block content %}
+	<div class='post-content-wrap note-detail-wrap'>
+		<article class='post'> 
+				<div class='post-head'>
+					<div class='post-title'>{{title}} </div>
+					<div class='post-meta'>
+						<span>{{created}}</span>
+						{% for name in tagNames %}
+							<span class='post-tag'>{{name}}</span>
+						{% endfor %}
+					</div>
+				</div>
+				<div class='post-content'>{{content | safe}}</div>
+		</article>
+	</div>
+{% endblock %}

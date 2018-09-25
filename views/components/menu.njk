@@ -1,0 +1,7 @@
+{% macro menu(current) %}
+<ul class='menu'>
+	<li><a href='/page/1' class="{{'on' if current==1 else ''}}">学习笔记</a></li>
+	<li><a href='' class="{{'on' if current==2 else ''}}">资料翻译</a></li>
+	<li><a href='/about' class="{{'on' if current==3 else ''}}">关于</a></li>
+</ul>
+{% endmacro %}

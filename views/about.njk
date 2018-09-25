@@ -1,0 +1,14 @@
+{% extends './components/layout.njk' %}
+
+{% block menu %}
+	{{macro.menu(3)}}
+{% endblock %}
+
+{% block content %}
+	<div class='about-wrap'>
+		作为印象笔记的重度用户,印象管理着自己的一切文档内容.如果能关联个人博客就太好了,但目前没有找到完全符合自己想法的项目,
+		所以便有了这个小网页应用,暂且取名叫大象博客吧.后端使用Nodejs基于Evernote API 搭建,
+		在笔记客户端将笔记放入大象博客笔记本中,就发布到自己的网页中了.代码已经发布到Github给和自己有一样需求的人.
+		<img src='/static/images/about.jpg'>
+	</div>
+{% endblock %}

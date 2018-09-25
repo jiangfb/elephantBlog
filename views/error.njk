@@ -1,0 +1,17 @@
+{% extends './components/layout.njk' %}
+
+{% block menu %}
+	{{macro.menu()}}
+{% endblock %}
+
+{% block content %}
+	<div class='error-wrap'>
+		<img src='/images/error.jpg'>
+		<div>
+			<h2>{{ message |safe }}</h2>
+			<h3>Error code {{ errorCode or 400 }}</h3>
+		</div>
+	</div>
+{% endblock %}
+
+
