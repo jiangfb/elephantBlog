@@ -8,8 +8,9 @@ Using Koa2 and base on Evernote API,publish your Evernote notes to personal webs
 
 ### Quick Start
 ```js
-git git@github.com:jiangfb/elephantBlog.git
+git clone git@github.com:jiangfb/elephantBlog.git
 cd elephantBlog/config
+
 //duplicate index.sample.js and rename to index.js
 //config value
 module.exports = {
@@ -29,6 +30,7 @@ module.exports = {
 	*/
 	token: 'Your evernote development token',
 }
+
 npm i
 npm start //http://localhost:3000
 
