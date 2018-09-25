@@ -25,7 +25,7 @@ module.exports = {
 	evernote(YXBJ) development token , 
 	apply from https://app.yinxiang.com/api/DeveloperToken.action 
 	如果不能自助申请可以在此人工申请 
-	https://app.yinxiang.com/api/DeveloperToken.action 
+	https://www.yinxiang.com/contact/support/ticket/
 	*/
 	token: 'Your evernote development token',
 }
