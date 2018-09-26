@@ -20,7 +20,7 @@ module.exports = {
 	china: true,
 	/*  change to false when you are ready to switch to production */
 	sandbox: false,
-	/* config which one notebook can be displayed in your blog. */
+	/* config which one notebook's content can be displayed in your blog. */
 	blogNoteBookName: '大象博客',//default name
 	/* 
 	evernote(YXBJ) development token , 
@@ -30,6 +30,8 @@ module.exports = {
 	*/
 	token: 'Your evernote development token',
 }
+
+//In the evernote app, create a new notebook named as '大象博客' or you configured just now
 
 npm i
 npm start //http://localhost:3000
