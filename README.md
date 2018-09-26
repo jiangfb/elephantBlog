@@ -46,7 +46,7 @@ npm start //http://localhost:3000
 ./public/static/index.scss
 
 
-### 后记/Note
+### 备注/Note
 * 笔记内容解析是基于[enml2html.js](https://github.com/itgoyo/enml2html)修改,(./evernote/tool/enml2html)将笔记图片保存到网站静态目录防止未分享笔记图片不显示.  
 * 所有数据请求都有做缓存处理,列表10分钟,笔记内容30分钟等等(./evernote/api/elephantBlogApi.js)  
 
