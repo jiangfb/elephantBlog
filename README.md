@@ -1,5 +1,5 @@
 ## 大象博客/ElephantBlog  
-[演示/Demo](https://jfb.im)
+[☞ 演示/Demo](https://jfb.im)
 
 ### 简介/introduction
 
